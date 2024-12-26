@@ -6,7 +6,7 @@ const app = express();
 
 // Middleware
 app.use(cookieParser());
-app.use(express.json()); 
+app.use(express.json());
 
 // Authorization middleware
 const authorization = (req, res, next) => {

@@ -1,2 +1,2 @@
 # jwt-cookies
- Simple & Secure JWT Auth using Cookies
+ Simple & Secure Auth using JWT and Cookies

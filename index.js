@@ -28,7 +28,7 @@ const authorization = (req, res, next) => {
 
 // Routes
 app.get("/", (req, res) => {
-    return res.json({ message: "Hello World 🇵🇹 🤘" });
+    return res.json({ message: "Hello World!" });
 });
 
 app.get("/login", (req, res) => {
@@ -40,7 +40,7 @@ app.get("/login", (req, res) => {
                 secure: process.env.NODE_ENV === "production",
             })
             .status(200)
-            .json({ message: "Logged in successfully 😊 👌" });
+            .json({ message: "Logged in successfully!" });
     } catch (error) {
         return res.status(500).json({ message: "Error signing token." });
     }
@@ -54,7 +54,7 @@ app.get("/logout", authorization, (req, res) => {
     return res
         .clearCookie("access_token")
         .status(200)
-        .json({ message: "Successfully logged out 😏 🍀" });
+        .json({ message: "Logged out successfully!" });
 });
 
 // Start server
